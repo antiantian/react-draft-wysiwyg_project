@@ -35,8 +35,8 @@ export default modelExtend(pageModel, {
                       id: '141',
                       mpid: '14',
                       name: '投稿管理',
-                      route: '/bronk/submission',
-                      details:'/bronk/submission/detail',   
+                      route: '/bronk/submission/detail',
+              
                        authority:{
                         list:['增加','修改','审核','隐藏','同步发布']
                       }
@@ -56,8 +56,7 @@ export default modelExtend(pageModel, {
                       id: '141',
                       mpid: '14',
                       name: '投稿管理',
-                      route: '/bronk/submission',
-                      details:'/bronk/submission/detail',   
+                       route: '/bronk/submission/detail',
                        authority:{
                         list:['增加','修改','审核','隐藏','同步发布']
                       }
@@ -83,7 +82,7 @@ export default modelExtend(pageModel, {
           //     payload:{location}
           //  })
           console.log(location)
-         if (location.pathname !== '/bronk/login'&&location.pathname !=='/') {
+         if (location.pathname !== '/bronk/homepage'&&location.pathname !=='/') {
             dispatch({  //token刷新
                 type: 'refreshT'
             })
@@ -147,147 +146,8 @@ export default modelExtend(pageModel, {
                       name: '工作台',
                       route: '/bronk/homepage'
                     },
-                    {
-                      id: '10',
-                      name: '作者管理',
-                      route: '/bronk/author',
-                      authority:{
-                         list:['增加','修改','删除']
-                      }
-                    },
-                    {
-                      id: '11',
-                      name: '用户管理',
-                      route: '/bronk/user',
-                      authority:{
-                        list:['封禁']
-                      }
-                    },
-                    {
-                      id: '12',
-                      name: '评论管理',
-                      route: '/bronk/comment',
-                      authority:{
-                        list:['隐藏']
-                      }
-                      //icon: 'team'
-                    },
-                    {
-                      id: '13',           
-                      name: '栏目管理',
-                      route: '/bronk/column',
-                      authority:{
-                         list:['增加','修改','删除','隐藏']
-                      }
-                    },
-                    {
-                      id: '14', 
-                      name: '发布管理',
-                    },
-                    {  ///bronk/video
-                      id: '141',
-                      mpid: '14',
-                      name: '投稿管理',
-                      route: '/bronk/submission',
-                      details:'/bronk/submission/detail',   
-                       authority:{
-                        list:['增加','修改','审核','隐藏','同步发布']
-                      }
-                    },
-                    {
-                      id: '142',
-                      mpid: '14',
-                      name: '发布管理',
-                      route: '/bronk/release',
-                      details:'/bronk/release/detail',  
-                      authority:{
-                        list:['修改','删除']
-                      } 
-                    },
-                    {
-                      id: '143',
-                      mpid: '14',
-                      name: '专题管理',
-                      route: '/bronk/special',
-                      details:'/bronk/special/detail',  
-                      authority:{
-                        list:['增加','修改','删除','置顶']
-                      }
-                    },
-                    {
-                      id: '144',
-                      mpid: '14',
-                      name: '视频管理',
-                      route: '/bronk/video',
-                      details:'/bronk/video/detail',  
-                       authority:{
-                        list:['增加','修改','隐藏']
-                      }
-                    },
-                    {
-                      id: '16',
-                      name: '企业数据库',
-                    },
-                    {
-                      id: '161',
-                      mpid: '16',
-                      name: '机构信息',
-                      route: '/database/organization',
-                      authority:{
-                        list:['增加','修改','删除']
-                      } 
-                    },
-                    {
-                      id: '162',
-                      mpid: '16',
-                      name: '企业信息',
-                      route: '/database/enterprise',
-                      authority:{
-                        list:['增加','修改','删除']
-                      } 
-                    }, 
-                    {
-                      id: '163',
-                      mpid: '16',
-                      name: '人物信息',
-                      route: '/database/personage',
-                      authority:{
-                        list:['增加','修改','删除']
-                      } 
-                    },
-                    {
-                      id: '15',
-                      name: '权限管理',
-                    },
-                    {
-                      id: '151',
-                      mpid: '15',
-                      name: '角色管理',
-                      route: '/bronk/role',
-                      details:'/bronk/role/detail,/bronk/role/personlist', 
-                      authority:{
-                        list:['增加','修改','删除','编辑成员','授权']
-                      }   
-                    }, 
-                    {
-                      id: '152',
-                      mpid: '15',
-                      name: '管理员管理',
-                      route: '/bronk/manager',
-                      authority:{
-                        list:['增加','修改','封禁','重置密码']
-                      }
-                    }, 
-                    {
-                      id: '153',
-                      mpid: '15',
-                      name: '应用管理',
-                      route: '/bronk/application',
-                      details:'/bronk/application/detail,/bronk/application/personlist',
-                      authority:{
-                        list:['增加','修改','删除','配置','重置']
-                      }  
-                    }
+               
+                   
              ] 
             // memus.push.apply(memus,audit);
              memus.push.apply(memus,parArr);
@@ -412,7 +272,7 @@ export default modelExtend(pageModel, {
               from: locationPathname,
             }))
           yield put(routerRedux.push({
-            pathname: '/bronk/login',   //pathname: '/login',
+            pathname: '/bronk/homepage',   //pathname: '/login',
             search: queryString.stringify({
               from: locationPathname,
             }),

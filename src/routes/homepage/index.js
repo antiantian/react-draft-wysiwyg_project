@@ -22,7 +22,7 @@ const HomePage = () => {
  const weeks=moment().format('d'); 
   return (
     <Page inner >
-        <div style={{...styles.head}}>欢迎来到布朗客内容管理系统</div>
+        <div style={{...styles.head}}>欢迎来到内容管理系统</div>
          <div>当前时间:<TimeDate/> {week[weeks]}</div>
      </Page>
   )
